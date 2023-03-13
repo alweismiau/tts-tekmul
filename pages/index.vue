@@ -18,15 +18,15 @@
             >Translateasyy</span
           >
         </div>
-        <!-- profile -->
+        <!-- language -->
         <div class="flex md:order-2">
-          <button>
-            <img
-              src="~/assets/profile.png"
-              class="sm:h-18"
-              alt="Profile logo"
-            />
-          </button>
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500 focus:ring-2"
+          >
+            <option selected>Indonesia</option>
+            <option value="US">English</option>
+          </select>
         </div>
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -52,54 +52,55 @@
       </div>
     </nav>
     <!-- isi -->
-    <form class="bg-white rounded-2xl container mx-auto translate-y-[14vh]"> 
-    <div>
-      <select
-        name="bhs"
-        id="bhs"
-        class="px-5 mt-10 mx-10 rounded-2xl bg-pink-500 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-black"
-      >
-        <option value="en">ENGLISH</option>
-        <option value="id">INDO</option>
-      </select>
-    </div>
-    <div class="py-5 px-10">
-      <input
-        id="text"
-        class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
-        type="text"
-        placeholder="type here"
-      /><br />
 
+    <form class="bg-white rounded-2xl container mx-auto translate-y-[14vh]">
       <div>
         <select
-          name="trans"
-          id="trans"
-          class="px-5 mt-10 mx-auto rounded-3xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-white"
+          name="bhs"
+          id="bhs"
+          class="px-5 mt-10 mx-10 rounded-2xl bg-pink-500 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-black"
         >
           <option value="en">ENGLISH</option>
           <option value="id">INDO</option>
         </select>
-        <div class="py-5 px-10">
-          <input
-            id="text"
-            class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
-            type="text"
-            placeholder="type here"
-          /><br />
+      </div>
+      <div class="py-5 px-10">
+        <input
+          id="text"
+          class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
+          type="text"
+          placeholder="type here"
+        /><br />
+
+        <div>
+          <select
+            name="trans"
+            id="trans"
+            class="px-5 mt-10 mx-auto rounded-3xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-white"
+          >
+            <option value="en">ENGLISH</option>
+            <option value="id">INDO</option>
+          </select>
+          <div class="py-5 px-10">
+            <input
+              id="text"
+              class="p-5 min-w-full text-center rounded-xl bg-gray-100 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 focus:outline-none text-white placeholder:text-gray-100"
+              type="text"
+              placeholder="type here"
+            /><br />
+          </div>
         </div>
+        <br />
+        <div class="flex justify-evenly">
+          <button type="submit" class="text-white font-semibold">Speak</button>
+          <button type="submit" class="text-white font-semibold">
+            Translate
+          </button>
+          <button type="submit" class="text-white font-semibold">Fusion</button>
+        </div>
+        <section id="translate" class="text-center pt-6 pb-2"></section>
       </div>
-      <br />
-      <div class="flex justify-evenly">
-        <button type="submit" class="text-white font-semibold">Speak</button>
-        <button type="submit" class="text-white font-semibold">
-          Translate
-        </button>
-        <button type="submit" class="text-white font-semibold">Fusion</button>
-      </div>
-      <section id="translate" class="text-center pt-6 pb-2"></section>
-    </div>
-  </form>
+    </form>
     <!-- </div> -->
   </div>
 </template>
